@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     "dance, contemporary ballet, Berlin, collective, radical representation, Nicholas King Rose, dance community",
   icons: {
     icon: "/icon.png",
+    shortcut: "/icon.png",
   },
   openGraph: {
     title: "King Rose Dance Collective",
