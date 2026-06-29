@@ -52,6 +52,7 @@ export default function Home() {
               width={848}
               height={1037}
               src="/logo-white.png"
+              preload
             />
           </div>
         )}
@@ -64,6 +65,7 @@ export default function Home() {
               width={848}
               height={1037}
               src="/logo-white.png"
+              preload
             />
             <div className="ml-4 w-px h-12 shrink-0 bg-[#F7F7F7] hidden md:block" />
             <h1 className="mt-2 md:mt-0 text-4xl md:text-5xl text-[#F7F7F7] z-10">
