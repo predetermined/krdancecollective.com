@@ -1,6 +1,6 @@
 "use client";
-
 import Image from "next/image";
+import { useState } from "react";
 import TeamMember from "../components/TeamMember";
 
 const teamMembers = [
@@ -35,9 +35,21 @@ const teamMembers = [
 ];
 
 export default function Home() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const handleVideoLoaded = () => {
+    setVideoLoaded(true);
+  };
+
   return (
     <>
-      <section className="flex items-center h-[100vh] overflow-hidden w-full relative">
+      <section className="flex items-center h-[100dvh] overflow-hidden w-full relative">
+        {!videoLoaded && (
+          <div className="absolute inset-0 z-20 flex items-center justify-center bg-black text-white">
+            Loading…
+          </div>
+        )}
+
         <div className="absolute bottom-0 left-0 right-0 top-0 flex px-4 md:px-16 items-center">
           <div className="z-10 max-w-64 flex-col flex md:flex-row md:items-center space-x-4">
             <Image
@@ -59,6 +71,9 @@ export default function Home() {
           autoPlay
           loop
           muted
+          playsInline
+          preload="auto"
+          onCanPlay={handleVideoLoaded}
           className="absolute inset-0 h-screen w-full object-cover"
         >
           <source src="/dance.mp4" type="video/mp4" />
@@ -71,7 +86,7 @@ export default function Home() {
           <a href="https://www.instagram.com/nicholaskrose/" target="_blank">
             Nicholas Isaiah King Rose
           </a>
-          , King Rose Dance Collective is Germany{"'"}s pioneering
+          , King Rose Dance Collective is Germany&apos;s pioneering
           BIPOC/QUEER/FLINTA dance troupe, redefining dance as we know it by
           blending ballet, contemporary styles, and everything in between. This
           is more than just performance; it's about empowerment and celebrating
@@ -100,10 +115,10 @@ export default function Home() {
 
       <section className="bg-black px-4 md:px-16 pt-8 md:pt-32 pb-4">
         <p className="text-center italic">
-          Reaching high isn't just about ambition—it's about breaking barriers,
-          redefining norms, and creating space for bold, authentic artistry. At
-          KRDC, we're reaching for more: more connection, more creativity, and
-          more impact.
+          Reaching high isn&apos;t just about ambition—it&apos;s about breaking
+          barriers, redefining norms, and creating space for bold, authentic
+          artistry. At KRDC, we&apos;re reaching for more: more connection, more
+          creativity, and more impact.
         </p>
 
         {/* <div className="w-px h-12 shrink-0 bg-[#F7F7F7] block" /> */}
