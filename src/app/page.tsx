@@ -46,7 +46,13 @@ export default function Home() {
       <section className="flex items-center h-[100dvh] overflow-hidden w-full relative">
         {!videoLoaded && (
           <div className="absolute inset-0 z-20 flex items-center justify-center bg-black text-white">
-            Loading…
+            <Image
+              className="m-4 md:m-0 md:block w-16 md:h-24 md:w-auto animate-pulse"
+              alt="logo"
+              width={848}
+              height={1037}
+              src="/logo-white.png"
+            />
           </div>
         )}
 
