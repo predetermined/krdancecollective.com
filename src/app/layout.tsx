@@ -25,9 +25,10 @@ export const metadata: Metadata = {
     shortcut: "/icon.png",
   },
   openGraph: {
-    title: "King Rose Dance Collective",
+    title:
+      "King Rose Dance Collective | Berlin's BIPOC/QUEER/FLINTA dance troupe",
     description:
-      "Berlin's Movement for Radical Representation. Blending ballet, contemporary styles, and everything in between.",
+      "King Rose Dance Collective is a Berlin-based dance movement blending ballet, contemporary styles, and radical representation. Founded by Nicholas Isaiah King Rose, KRDC is about empowerment, celebrating diverse voices, and redefining dance.",
     type: "website",
     locale: "en_US",
   },
